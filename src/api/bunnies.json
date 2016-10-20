@@ -1,0 +1,42 @@
+﻿[
+	{
+		"id": 1,
+        "name": "Thumper",
+        "description": "Cute little fellow that loves to entertain us with his binkies",
+        "imageUrl": "content/img/thumper.jpg",
+        "hidden": false,
+        "age": 2,
+        "likes": 0,
+        "isMostPopular": false
+	},
+    {
+        "id": 2,
+        "name": "Elsa",
+        "description": "She sure doesn't have a cold, frozen heart.",
+        "imageUrl": "content/img/elsa.jpg",
+        "hidden": false,
+        "age": 1,
+        "likes": 0,
+        "isMostPopular": false
+    },
+    {
+        "id": 3,
+        "name": "Pippin",
+        "description": "Grumpy bunny that will steal your heart.",
+        "imageUrl": "content/img/pippin.jpg",
+        "hidden": false,
+        "age": 0.5,
+        "likes": 0,
+        "isMostPopular": false
+    },
+    {
+        "id": 4,
+        "name": "Turbo",
+        "description": "Try to catch this guy when he launches into his bunny 500.",
+        "imageUrl": "content/img/turbo.jpg",
+        "hidden": false,
+        "age": 4,
+        "likes": 0,
+        "isMostPopular": false
+    }
+]

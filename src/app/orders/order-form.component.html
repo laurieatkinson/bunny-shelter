@@ -1,0 +1,53 @@
+﻿<div class="container">
+    <div [hidden]="submitted">
+        <h1>Order Form</h1>
+        <form *ngIf="active" (ngSubmit)="onSubmit()" #orderForm="ngForm">
+            <div class="form-group">
+                <label for="ownerName">My Name</label>
+                <input type="text" class="form-control" id="ownerName"
+                       required
+                       [(ngModel)]="order.ownerName" name="ownerName"
+                       #owner="ngModel">
+                <div [hidden]="owner.valid || owner.pristine"
+                     class="alert alert-danger">
+                    Name is required
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="ownerEmail">My Email Address</label>
+                <input type="email" class="form-control" id="ownerEmail"
+                       required
+                       [(ngModel)]="order.ownerEmail" name="ownerEmail"
+                       #ownerEmail="ngModel">
+                <div [hidden]="ownerEmail.valid || ownerEmail.pristine"
+                     class="alert alert-danger">
+                    Email Address is required
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="bunnyName">Bunny Name</label>
+                <input type="text" class="form-control" id="bunnyName" disabled="true"
+                       [innerText]="order.bunnyName" name="bunnyName" />
+            </div>
+            <button type="submit" class="btn btn-default" [disabled]="!orderForm.form.valid">Submit</button>
+            <button type="button" class="btn btn-default" (click)="newOrder()">New Order</button>
+        </form>
+    </div>
+    <div [hidden]="!submitted">
+        <h2>You submitted the following:</h2>
+        <div class="row">
+            <div class="col-xs-3">Your Name</div>
+            <div class="col-xs-9  pull-left">{{ order.ownerName }}</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3">Your Email</div>
+            <div class="col-xs-9  pull-left">{{ order.ownerEmail }}</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3">Bunny Name</div>
+            <div class="col-xs-9 pull-left">{{ order.bunnyName }}</div>
+        </div>
+        <br>
+        <button class="btn btn-default" (click)="submitted=false">Edit</button>
+    </div>
+</div>

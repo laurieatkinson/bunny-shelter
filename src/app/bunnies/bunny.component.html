@@ -1,0 +1,13 @@
+﻿<div class="container">
+    <div class='panel panel-primary' *ngIf="bunny">
+        <div class='panel-heading'>
+            {{bunny.name | uppercase}}
+        </div>
+
+        <div class='panel-body'>
+            <img [src]='bunny.imageUrl' [title]='bunny.name' style="float: left;padding:5px" />
+            <h4>{{bunny.description}}</h4>
+            <button class="btn btn-primary" (click)="adoptBunny()">Adopt this bunny</button>
+        </div>
+    </div>
+</div>
